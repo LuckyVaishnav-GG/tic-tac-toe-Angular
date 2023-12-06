@@ -1,0 +1,12 @@
+<h1>Current Player: {{ getPlayer }} </h1>
+<button ngButton outline (click)="newGame()"> new game</button>
+
+<p *ngIf = "winner">winner is : {{winner}}</p>
+<main>
+    <app-square 
+        *ngFor="let val of squares; let i = index" 
+        [value]="val"
+        (click)="makeMove(i)"> 
+
+    </app-square>
+</main>
